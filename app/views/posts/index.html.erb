@@ -1,0 +1,14 @@
+<h3>Lorem Ipsum</h3>
+
+
+<BR><BR>
+
+    <% @posts.each do |post| %><BR><BR>
+    <h3> <%= post.name %></h3><BR><BR>
+    <p class="content"><%= post.content %></p>
+<%= image_tag(post.picture_url, :width => 600) if post.picture.present? %>
+    <% end %>
+ 
+<br>
+
+<%= link_to 'New Post', new_post_path %>
